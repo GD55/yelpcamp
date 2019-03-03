@@ -22,6 +22,10 @@
 	margin-bottom: 20px;
 }
 
+.close:focus{
+	outline: none;
+}
+
 .btn-group-xs > .btn, .btn-xs {
 	padding  : .4rem .4rem;
 	font-size  : .75rem;
