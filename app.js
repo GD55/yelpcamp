@@ -72,6 +72,6 @@ app.use("/",authRoutes);
 // 		{name: "Mountain Groot",img: "http://hillsidecampsite.co.uk/wp-content/uploads/2018/04/Webp.net-compress-image.jpg"}
 // ]
 
-app.listen(3000,function(){
+app.listen(process.env.PORT,process.env.IP,function(){
 	console.log("YelpCamp server started on port 3000");
 });
