@@ -2,6 +2,10 @@
 	margin-bottom: 20px;
 }
 
+.container{
+	margin-bottom: 20px;
+}
+
 #delete-campground{
 	display: inline;
 }
