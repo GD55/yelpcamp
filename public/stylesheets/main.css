@@ -1,0 +1,26 @@
+.navbar{
+	margin-bottom: 20px;
+}
+
+#delete-campground{
+	display: inline;
+}
+
+#delete-comment{
+	display: inline;
+}
+
+.card-img-top{
+	object-fit: cover;
+}
+
+#mar{
+	margin-bottom: 20px;
+}
+
+.btn-group-xs > .btn, .btn-xs {
+	padding  : .4rem .4rem;
+	font-size  : .75rem;
+	line-height  : .6;
+	border-radius : .2rem;
+}
