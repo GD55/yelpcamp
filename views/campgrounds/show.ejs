@@ -17,7 +17,7 @@
 						<h4 class="float-left"><a class="card-link" href=""><%=campground.name%></a></h4> 
 						<h6 class="float-right">$<%= campground.price %>/night</h4>
 					</div>
-					<p class="card-text"><%=campground.description%></p>
+					<p class="card-text"><%-campground.description%></p>
 					<p>
 						<em>Submitted By <%= campground.author.username %> </em>
 					</p>

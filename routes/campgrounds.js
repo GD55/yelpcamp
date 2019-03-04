@@ -27,7 +27,7 @@ router.post("/",middleware.isLoggedIn,function(req,res){
 	var name = req.body.name;
 	var image = req.body.image;
 	var price = req.body.price;
-    var desc = req.body.description;
+    var desc = req.sanitize(req.body.description);
     var author = {
         id: req.user._id,
         username: req.user.username
@@ -50,6 +50,7 @@ router.post("/",middleware.isLoggedIn,function(req,res){
 router.get("/:id",function(req,res){
 	//find campground with provided id
 	Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
+		foundCampground.description = req.sanitize(foundCampground.description);
 		if(err){
 			console.log(err);
 		}else{
@@ -62,6 +63,7 @@ router.get("/:id",function(req,res){
 //edit campground route
 router.get("/:id/edit",middleware.checkCampgroundOwnership,function(req,res){
 		Campground.findById(req.params.id,function(err, foundCampground){
+			foundCampground.description = req.sanitize(foundCampground.description);
 			res.render("campgrounds/edit",{campground: foundCampground});
 		});
 });
@@ -71,6 +73,7 @@ router.get("/:id/edit",middleware.checkCampgroundOwnership,function(req,res){
 router.put("/:id",middleware.checkCampgroundOwnership,function(req,res){
 	//find and update the correct campground
 	Campground.findByIdAndUpdate(req.params.id,req.body.campground, function(err, updatedCampground){
+		updatedCampground.description = req.sanitize(updatedCampground.description);
 		if(err){
 			res.redirect("/campgrounds");
 		}else{
