@@ -4,11 +4,13 @@
 		<title>YelpCamp</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<link rel="icon" href="http://www.transparentpng.com/download/campsite/DXusrM-camp-map-clipart-png-photos.png">
 		<meta name="google-site-verification" content="Cwy5hLw-XA4CNfMbpveX8dGEb_49tGFwpKF9VXtg7Y4" />
 	</head>
 	<body>
 	<nav class="navbar navbar-expand-md navbar-light bg-light">
-		<a class="navbar-brand" href="/">YelpCamp</a>
+		<a class="navbar-brand" href="/"><i class="fas fa-campground"></i> YelpCamp</a>
 		<a class="nav-link mr-auto" href="/campgrounds">Campgrounds</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -16,11 +18,11 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">		
 			<ul class="navbar-nav ml-auto">
 				<% if(!currentUser){ %>
-					<li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
-					<li class="nav-item"><a class="nav-link" href="/register">Sin Up</a></li>
+					<li class="nav-item"><a class="nav-link" href="/login">Login <i class="fas fa-user"></i></a></li>
+					<li class="nav-item"><a class="nav-link" href="/register">Sin Up <i class="fas fa-user-plus"></i></a></li>
 				<% } else{ %>
 					<li class="nav-item"><a class="nav-link">Signed in as <%= currentUser.username %></a></li>
-					<li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+					<li class="nav-item"><a class="nav-link" href="/logout">Logout <i class="fas fa-sign-out-alt"></i></a></li>
 				<% } %>
 			</ul>
 		</div>
