@@ -11,17 +11,14 @@
 	<div class="row text-center">
 		<% campgrounds.forEach(function(campgrounds){ %>
 			<div id="mar" class="col-lg-3 col-md-4 col-sm-6">
-				<div class="card h-100">
+				<a href="/campgrounds/<%= campgrounds._id%>" class="card h-100">
 					<div class="embed-responsive embed-responsive-16by9">
 						<img class="card-img-top embed-responsive-item" src="<%=campgrounds.image%>">
 					</div>
 					<div class="card-body">
-						<h4 class="card-title"><%=campgrounds.name%></h4>
+						<h5 class="card-title"><%=campgrounds.name%></h5>
 					</div>
-					<div class="card-footer">
-						<a href="/campgrounds/<%= campgrounds._id%>" class="btn btn-primary">More Info</a>
-					</div>
-				</div>
+				</a>
 			</div>
 		<% }); %>
 	</div>

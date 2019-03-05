@@ -26,6 +26,19 @@
 	outline: none;
 }
 
+a.card,
+a.card:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+a.card:hover{
+	transform: scale(1.75);
+	z-index: 1;
+	box-shadow: 1px 1px 0.5px 1px rgb(165, 175, 229);
+	transition: transform 0.75s ease-in-out;
+}
+
 .btn-group-xs > .btn, .btn-xs {
 	padding  : .4rem .4rem;
 	font-size  : .75rem;
